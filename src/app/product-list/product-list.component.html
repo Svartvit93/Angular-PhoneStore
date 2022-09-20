@@ -5,7 +5,9 @@
     <h3>    
         <!--Using the a tag makes every product a link
         We then use property binding and set the title to the product's name -->
-        <a [title]="product.name + ' details'">
+        <a 
+            [title]="product.name + ' details'"
+            [routerLink]="['/products', product.id]">
             <!--We use string interpolation here-->
             {{ product.name }}
         </a>
